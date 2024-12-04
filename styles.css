@@ -1,5 +1,131 @@
+:root {
+  --light-gray: #f1f3f5;
+  --dark-green: #2b8a3e;
+  --blue: #339af0;
+  --dark-blue: #1864ab;
+
+  --javascript: #f7df1e;
+  --typescript: #007acc;
+  --node: #8cc84b;
+  --react: #01d8ff;
+  --html: #e44d26;
+  --css: #1472b6;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  padding: 12px;
+  line-height: 1.5;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+h1 { font-size: 2.5em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.2em; }
+p { font-size: 1em; }
+
+/* containers */
+section {
+  margin: 64px 0;
+}
+
+/* anchor */
+a {
+  color: var(--blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--dark-blue);
+}
+
+/* quote */
+blockquote.quote {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.2em;
+  background-color: var(--light-gray);
+  color: #333;
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.2);
+  border-left: 5px solid var(--dark-green);
+  border-radius: 4px;
+  padding: 12px;
+  max-width: 500px;
+}
+blockquote.quote footer {
+  text-align: right;
+  font-size: 0.8em;
+  color: var(--dark-green);
+}
+
+/* custom list */
+.list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style-type: none;
+  margin: 12px 0;
   padding: 0;
+}
+
+/* list items */
+.list li {
+  padding: 12px;
+  background-color: var(--light-gray);
+  border-radius: 6px;
+  text-align: center;
+}
+.tech-list li {
+  width: 80px;
+}
+.project-list li {
+  width: 240px;
+  line-height: 2.5;
+  outline: 2px solid var(--dark-green);
+}
+
+/* list elements */
+.tech-list li p {
+  font-weight: 500;
+}
+.tech-list li img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* list interactions */
+.list li:hover {
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 200ms;
+}
+.list li.javascript:hover {
+  box-shadow: 8px 8px 24px 0px var(--javascript);
+}
+.list li.typescript:hover {
+  box-shadow: 8px 8px 24px 0px var(--typescript);
+}
+.list li.node:hover {
+  box-shadow: 8px 8px 24px 0px var(--node);
+}
+.list li.react:hover {
+  box-shadow: 8px 8px 24px 0px var(--react);
+}
+.list li.html:hover {
+  box-shadow: 8px 8px 24px 0px var(--html);
+}
+.list li.css:hover {
+  box-shadow: 8px 8px 24px 0px var(--css);
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .project-list li {
+    width: 100%;
+  }
 }
